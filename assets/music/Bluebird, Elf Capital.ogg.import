@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bfku7larpkkxw"
+path="res://.godot/imported/Bluebird, Elf Capital.ogg-768dc79f61d5fd13888689f3497d706c.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/music/Bluebird, Elf Capital.ogg"
+dest_files=["res://.godot/imported/Bluebird, Elf Capital.ogg-768dc79f61d5fd13888689f3497d706c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

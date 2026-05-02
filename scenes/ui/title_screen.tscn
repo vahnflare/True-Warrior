@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://dl57fm0nfbwu5"]
+
+[ext_resource type="Texture2D" uid="uid://bf6tn4xxmvyyh" path="res://assets/art/backgrounds/true_warrior_logo_100x64.png" id="1_aqpy5"]
+[ext_resource type="Script" uid="uid://doesrw4io0kfi" path="res://scenes/ui/title_screen.gd" id="1_w8uqo"]
+[ext_resource type="PackedScene" uid="uid://uqrqng3qanfq" path="res://world.tscn" id="2_a4ium"]
+[ext_resource type="Theme" uid="uid://xujyuvvstsau" path="res://gui_theme.tres" id="2_w8uqo"]
+[ext_resource type="PackedScene" uid="uid://bcl60y62h4a43" path="res://scenes/ui/controls/cutscene/opening_cutscene.tscn" id="3_r23qo"]
+
+[node name="TitleScreen" type="Control" unique_id=55987204]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w8uqo")
+world_scene = ExtResource("2_a4ium")
+cutscene_scene = ExtResource("3_r23qo")
+
+[node name="Background" type="TextureRect" parent="." unique_id=410803327]
+layout_mode = 1
+offset_right = 100.0
+offset_bottom = 64.0
+texture = ExtResource("1_aqpy5")
+stretch_mode = 6
+
+[node name="Menu" type="VBoxContainer" parent="." unique_id=1480372856]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -25.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = -4
+
+[node name="Start" type="Button" parent="Menu" unique_id=1156646704]
+layout_mode = 2
+theme = ExtResource("2_w8uqo")
+text = "START"
+
+[node name="Quit" type="Button" parent="Menu" unique_id=347602536]
+layout_mode = 2
+theme = ExtResource("2_w8uqo")
+text = "QUIT"
+
+[connection signal="pressed" from="Menu/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Menu/Quit" to="." method="_on_quit_pressed"]

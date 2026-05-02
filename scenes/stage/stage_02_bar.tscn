@@ -1,0 +1,150 @@
+[gd_scene format=3 uid="uid://olejhu0beo7j"]
+
+[ext_resource type="PackedScene" uid="uid://df3rikr3va82q" path="res://scenes/stage/stage.tscn" id="1_k1f16"]
+[ext_resource type="Texture2D" uid="uid://bvookqfd2anbr" path="res://assets/art/backgrounds/bar-background.png" id="2_o3esi"]
+[ext_resource type="PackedScene" uid="uid://bkc2erd4706qe" path="res://scenes/stage/checkpoint.tscn" id="3_hsnae"]
+[ext_resource type="PackedScene" uid="uid://77l4jx081mf4" path="res://scenes/characters/thug_enemy.tscn" id="4_c4j3w"]
+[ext_resource type="PackedScene" uid="uid://ba7x8fhqs3fta" path="res://scenes/characters/basic_enemy.tscn" id="5_c4j3w"]
+[ext_resource type="PackedScene" uid="uid://cnwqi0bw23cl3" path="res://scenes/characters/goon_enemy.tscn" id="6_07e05"]
+[ext_resource type="PackedScene" uid="uid://dv0080mtbogqj" path="res://scenes/characters/igor_boss.tscn" id="7_07e05"]
+[ext_resource type="Texture2D" uid="uid://8hbdmu55k7s7" path="res://assets/art/props/jukebox.png" id="9_les71"]
+[ext_resource type="Texture2D" uid="uid://dnk6kyioc1ddn" path="res://assets/art/props/table.png" id="10_oovgt"]
+[ext_resource type="Texture2D" uid="uid://c0ssv6qiy0gk" path="res://assets/art/props/bar-counter.png" id="11_45wfv"]
+[ext_resource type="Texture2D" uid="uid://ph0k3cq3hfju" path="res://assets/art/props/toilet.png" id="12_bwn8s"]
+[ext_resource type="Texture2D" uid="uid://w2lxjh6sq0vw" path="res://assets/art/props/wall-ads.png" id="13_i41o7"]
+
+[node name="Stage-02-Bar" unique_id=430751948 instance=ExtResource("1_k1f16")]
+music = 3
+
+[node name="MainBackgorund" parent="Backgrounds" index="0"]
+texture = ExtResource("2_o3esi")
+
+[node name="Checkpoint" parent="Checkpoints" index="0" unique_id=1555814675 instance=ExtResource("3_hsnae")]
+position = Vector2(70, 0)
+nb_simultaneous_enemies = 4
+
+[node name="ThugEnemy" parent="Checkpoints/Checkpoint/Enemies" index="0" unique_id=1250060652 instance=ExtResource("4_c4j3w")]
+position = Vector2(-3, 38)
+
+[node name="ThugEnemy2" parent="Checkpoints/Checkpoint/Enemies" index="1" unique_id=2123225456 instance=ExtResource("4_c4j3w")]
+position = Vector2(-3, 58)
+
+[node name="ThugEnemy3" parent="Checkpoints/Checkpoint/Enemies" index="2" unique_id=1544833668 instance=ExtResource("4_c4j3w")]
+position = Vector2(114, 41)
+
+[node name="ThugEnemy4" parent="Checkpoints/Checkpoint/Enemies" index="3" unique_id=1566235733 instance=ExtResource("4_c4j3w")]
+position = Vector2(38, -7)
+
+[node name="ThugEnemy5" parent="Checkpoints/Checkpoint/Enemies" index="4" unique_id=1429047792 instance=ExtResource("4_c4j3w")]
+position = Vector2(70, -7)
+
+[node name="ThugEnemy6" parent="Checkpoints/Checkpoint/Enemies" index="5" unique_id=1802650726 instance=ExtResource("4_c4j3w")]
+position = Vector2(25, 93)
+
+[node name="ThugEnemy7" parent="Checkpoints/Checkpoint/Enemies" index="6" unique_id=2041081312 instance=ExtResource("4_c4j3w")]
+position = Vector2(83, 92)
+
+[node name="Checkpoint2" parent="Checkpoints" index="1" unique_id=889335852 instance=ExtResource("3_hsnae")]
+position = Vector2(200, 0)
+nb_simultaneous_enemies = 3
+
+[node name="BasicEnemy" parent="Checkpoints/Checkpoint2/Enemies" index="0" unique_id=1818075621 instance=ExtResource("5_c4j3w")]
+position = Vector2(32, -7)
+
+[node name="BasicEnemy2" parent="Checkpoints/Checkpoint2/Enemies" index="1" unique_id=892773194 instance=ExtResource("5_c4j3w")]
+position = Vector2(91, 97)
+
+[node name="GoonEnemy6" parent="Checkpoints/Checkpoint2/Enemies" index="2" unique_id=463548605 instance=ExtResource("6_07e05")]
+position = Vector2(48, 94)
+
+[node name="BasicEnemy3" parent="Checkpoints/Checkpoint2/Enemies" index="3" unique_id=405954567 instance=ExtResource("5_c4j3w")]
+position = Vector2(-17, 46)
+
+[node name="GoonEnemy4" parent="Checkpoints/Checkpoint2/Enemies" index="4" unique_id=471542591 instance=ExtResource("6_07e05")]
+position = Vector2(111, 53)
+
+[node name="GoonEnemy5" parent="Checkpoints/Checkpoint2/Enemies" index="5" unique_id=998983481 instance=ExtResource("6_07e05")]
+position = Vector2(15, -8)
+has_knife = false
+
+[node name="BasicEnemy4" parent="Checkpoints/Checkpoint2/Enemies" index="6" unique_id=1809604505 instance=ExtResource("5_c4j3w")]
+position = Vector2(12, 95)
+
+[node name="BasicEnemy5" parent="Checkpoints/Checkpoint2/Enemies" index="7" unique_id=2074658978 instance=ExtResource("5_c4j3w")]
+position = Vector2(79, 96)
+
+[node name="GoonEnemy7" parent="Checkpoints/Checkpoint2/Enemies" index="8" unique_id=809230288 instance=ExtResource("6_07e05")]
+position = Vector2(80, -8)
+
+[node name="GoonEnemy8" parent="Checkpoints/Checkpoint2/Enemies" index="9" unique_id=1165183355 instance=ExtResource("6_07e05")]
+position = Vector2(-16, 60)
+
+[node name="GoonEnemy9" parent="Checkpoints/Checkpoint2/Enemies" index="10" unique_id=1289960460 instance=ExtResource("6_07e05")]
+position = Vector2(114, 68)
+
+[node name="ThugEnemy" parent="Checkpoints/Checkpoint2/Enemies" index="11" unique_id=1840787475 instance=ExtResource("4_c4j3w")]
+position = Vector2(-19, 70)
+
+[node name="ThugEnemy2" parent="Checkpoints/Checkpoint2/Enemies" index="12" unique_id=1152440971 instance=ExtResource("4_c4j3w")]
+position = Vector2(49, -7)
+
+[node name="BasicEnemy6" parent="Checkpoints/Checkpoint2/Enemies" index="13" unique_id=199714451 instance=ExtResource("5_c4j3w")]
+position = Vector2(32, 96)
+
+[node name="BasicEnemy7" parent="Checkpoints/Checkpoint2/Enemies" index="14" unique_id=765630058 instance=ExtResource("5_c4j3w")]
+position = Vector2(66, 96)
+
+[node name="Checkpoint3" parent="Checkpoints" index="2" unique_id=767603127 instance=ExtResource("3_hsnae")]
+position = Vector2(330, 0)
+
+[node name="ThugEnemy4" parent="Checkpoints/Checkpoint3/Enemies" index="0" unique_id=954474421 instance=ExtResource("4_c4j3w")]
+position = Vector2(116, 40)
+
+[node name="ThugEnemy5" parent="Checkpoints/Checkpoint3/Enemies" index="1" unique_id=108034334 instance=ExtResource("4_c4j3w")]
+position = Vector2(115, 61)
+
+[node name="IgorBoss" parent="Checkpoints/Checkpoint3/Enemies" index="2" unique_id=1790991305 instance=ExtResource("7_07e05")]
+position = Vector2(115, 57)
+
+[node name="JukeBox" type="Sprite2D" parent="Fixtures" index="0" unique_id=636776881]
+position = Vector2(99, 17)
+texture = ExtResource("9_les71")
+
+[node name="JukeBox2" type="Sprite2D" parent="Fixtures" index="1" unique_id=637136614]
+position = Vector2(99, 17)
+texture = ExtResource("9_les71")
+
+[node name="Table" type="Sprite2D" parent="Fixtures" index="2" unique_id=438580168]
+position = Vector2(132, 16)
+texture = ExtResource("10_oovgt")
+
+[node name="Table2" type="Sprite2D" parent="Fixtures" index="3" unique_id=1826086405]
+position = Vector2(363, 16)
+texture = ExtResource("10_oovgt")
+
+[node name="BarCounter" type="Sprite2D" parent="Fixtures" index="4" unique_id=1277070748]
+position = Vector2(296, 8)
+texture = ExtResource("11_45wfv")
+
+[node name="Toilet" type="Sprite2D" parent="Fixtures" index="5" unique_id=1842216550]
+position = Vector2(402, 17)
+texture = ExtResource("12_bwn8s")
+
+[node name="WallAdds" type="Sprite2D" parent="Fixtures" index="6" unique_id=1588618459]
+position = Vector2(53, 17)
+texture = ExtResource("13_i41o7")
+
+[node name="WallAdds2" type="Sprite2D" parent="Fixtures" index="7" unique_id=43559609]
+position = Vector2(473, 17)
+texture = ExtResource("13_i41o7")
+
+[node name="WallAdds3" type="Sprite2D" parent="Fixtures" index="8" unique_id=241276898]
+position = Vector2(185, 17)
+texture = ExtResource("13_i41o7")
+
+[node name="PlayerSpawnLocation" parent="." index="6"]
+position = Vector2(30, 48)
+
+[editable path="Checkpoints/Checkpoint"]
+[editable path="Checkpoints/Checkpoint2"]
+[editable path="Checkpoints/Checkpoint3"]

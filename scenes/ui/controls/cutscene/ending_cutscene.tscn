@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://ciny2uaesqjir"]
+
+[ext_resource type="PackedScene" uid="uid://bcl60y62h4a43" path="res://scenes/ui/controls/cutscene/opening_cutscene.tscn" id="1_un68a"]
+[ext_resource type="Script" uid="uid://beg81l28rldk0" path="res://scenes/ui/controls/cutscene/ending_cutscene.gd" id="2_ehd3x"]
+[ext_resource type="AudioStream" uid="uid://bfku7larpkkxw" path="res://assets/music/Bluebird, Elf Capital.ogg" id="2_ete25"]
+
+[node name="EndingCutscene" unique_id=325830147 instance=ExtResource("1_un68a")]
+script = ExtResource("2_ehd3x")
+
+[node name="AudioStreamPlayer" parent="." index="3" unique_id=961129856]
+stream = ExtResource("2_ete25")

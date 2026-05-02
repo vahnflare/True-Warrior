@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://bcl60y62h4a43"]
+
+[ext_resource type="Script" uid="uid://ce5ltcb6di2wh" path="res://scenes/ui/controls/cutscene/opening_cutscene.gd" id="1_2eh7l"]
+[ext_resource type="Texture2D" uid="uid://dsbtuw0nevrgq" path="res://assets/art/characters/john_48x48.png" id="1_2jqdi"]
+[ext_resource type="PackedScene" uid="uid://uqrqng3qanfq" path="res://world.tscn" id="2_mtewv"]
+[ext_resource type="FontFile" uid="uid://c4agqxkh4gvlx" path="res://assets/fonts/my 3x5 tiny mono pixel font.ttf" id="3_a1c8y"]
+[ext_resource type="AudioStream" uid="uid://50kie12e34dc" path="res://assets/music/Smiling Forest.ogg" id="4_ki0hu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ijp81"]
+
+[node name="OpeningCutscene" type="Node2D" unique_id=325830147]
+script = ExtResource("1_2eh7l")
+world_scene = ExtResource("2_mtewv")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1227589479]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="DialogueUI" type="Node2D" parent="." unique_id=1831721324]
+position = Vector2(93, 40)
+
+[node name="Panel" type="Panel" parent="DialogueUI" unique_id=1544264459]
+offset_left = -68.0
+offset_top = -35.0
+offset_right = 4.0
+offset_bottom = -17.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_ijp81")
+
+[node name="Portrait" type="TextureRect" parent="DialogueUI/Panel" unique_id=1358750174]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 12.0
+offset_bottom = 17.0
+expand_mode = 1
+
+[node name="DialogueLabel" type="Label" parent="DialogueUI/Panel" unique_id=563698125]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 9.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_a1c8y")
+theme_override_font_sizes/font_size = 6
+autowrap_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1827856726]
+position = Vector2(11, 47)
+texture = ExtResource("1_2jqdi")
+hframes = 10
+vframes = 7
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer2D" parent="." unique_id=961129856]
+stream = ExtResource("4_ki0hu")
+volume_db = -9.066
+autoplay = true

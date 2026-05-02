@@ -1,0 +1,288 @@
+[gd_scene format=3 uid="uid://bmmqhrfrg030t"]
+
+[ext_resource type="Script" uid="uid://b8pxfd1rp4y4x" path="res://npc/npc.gd" id="1_nhy3c"]
+[ext_resource type="Texture2D" uid="uid://cjlullb74g6ng" path="res://assets/art/characters/enemy_goon.png" id="2_ldo70"]
+[ext_resource type="Texture2D" uid="uid://d3qkcr7q5eglq" path="res://assets/DialogBox.png" id="3_ldo70"]
+[ext_resource type="Texture2D" uid="uid://piyaoq0panq4" path="res://assets/art/ui/avatars/avatar-goon.png" id="5_fnhme"]
+[ext_resource type="FontFile" uid="uid://bsqqp13r1wfkc" path="res://assets/fonts/PressStart2P.ttf" id="5_ldo70"]
+[ext_resource type="FontFile" uid="uid://c4agqxkh4gvlx" path="res://assets/fonts/my 3x5 tiny mono pixel font.ttf" id="6_fnhme"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nhy3c"]
+size = Vector2(15, 16)
+
+[sub_resource type="Animation" id="Animation_2xp5l"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("InteractionArea/CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-0.5, -8)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("InteractionArea/CollisionShape2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_3i1kj"]
+resource_name = "walk_down"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 0), Vector2i(0, 1), Vector2i(0, 2), Vector2i(0, 3)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("InteractionArea/CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-0.5, -8), Vector2(-0.5, -8), Vector2(-0.5, -8), Vector2(-0.5, -8)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("InteractionArea/CollisionShape2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1), Vector2(1, 1), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_o6cys"]
+resource_name = "walk_left"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(2, 0), Vector2i(2, 1), Vector2i(2, 2), Vector2i(2, 3)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("InteractionArea/CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-0.5, -8), Vector2(-0.5, -8), Vector2(-0.5, -8), Vector2(-0.5, -8)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("InteractionArea/CollisionShape2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1), Vector2(1, 1), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ldo70"]
+resource_name = "walk_right"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(3, 0), Vector2i(3, 1), Vector2i(3, 2), Vector2i(3, 3)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("InteractionArea/CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-0.5, -8), Vector2(-0.5, -8), Vector2(-0.5, -8), Vector2(-0.5, -8)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("InteractionArea/CollisionShape2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1), Vector2(1, 1), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_nhy3c"]
+resource_name = "walk_up"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(1, 0), Vector2i(1, 1), Vector2i(1, 2), Vector2i(1, 3)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("InteractionArea/CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-0.5, -8), Vector2(-0.5, -8), Vector2(-0.5, -8), Vector2(-0.5, -8)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("InteractionArea/CollisionShape2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1), Vector2(1, 1), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3i1kj"]
+_data = {
+&"RESET": SubResource("Animation_2xp5l"),
+&"walk_down": SubResource("Animation_3i1kj"),
+&"walk_left": SubResource("Animation_o6cys"),
+&"walk_right": SubResource("Animation_ldo70"),
+&"walk_up": SubResource("Animation_nhy3c")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3i1kj"]
+size = Vector2(19, 20)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o6cys"]
+texture = ExtResource("3_ldo70")
+
+[sub_resource type="LabelSettings" id="LabelSettings_ldo70"]
+
+[node name="npc" type="CharacterBody2D" unique_id=1628351577 groups=["player"]]
+script = ExtResource("1_nhy3c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2030247757]
+visible = false
+position = Vector2(-0.5, -8)
+shape = SubResource("RectangleShape2D_nhy3c")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1716730361]
+position = Vector2(-3, -18)
+texture = ExtResource("2_ldo70")
+hframes = 11
+vframes = 8
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=609778933]
+libraries/ = SubResource("AnimationLibrary_3i1kj")
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=1687464627]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=1811904741]
+position = Vector2(-0.5, -8)
+shape = SubResource("RectangleShape2D_3i1kj")
+
+[node name="DialogueUI" type="Node2D" parent="." unique_id=1259737482]
+position = Vector2(-20, 5)
+
+[node name="Panel" type="Panel" parent="DialogueUI" unique_id=1260888812]
+offset_left = -13.0
+offset_top = -3.0
+offset_right = 59.0
+offset_bottom = 15.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_o6cys")
+
+[node name="Portrait" type="TextureRect" parent="DialogueUI/Panel" unique_id=1147353647]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 12.0
+offset_bottom = 17.0
+texture = ExtResource("5_fnhme")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="DialogueUI/Panel" unique_id=1808188387]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 4.0
+offset_right = 52.0
+offset_bottom = 16.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_ldo70")
+theme_override_font_sizes/font_size = 6
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NameLabel" type="Label" parent="DialogueUI/Panel" unique_id=1610606098]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 23.0
+scale = Vector2(0.11999875, 0.15558113)
+theme_override_fonts/font = ExtResource("6_fnhme")
+theme_override_font_sizes/font_size = 2
+text = "Punk"
+label_settings = SubResource("LabelSettings_ldo70")
